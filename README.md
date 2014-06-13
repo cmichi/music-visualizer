@@ -6,17 +6,21 @@ It seems to me, as if there are so many overloaded, colorful music
 visualizers crammed with effects out there, that the actual difficulty 
 is to write a reduced, simple one. 
 
+
+## Start it 
+
 The audio input is taken from Line-In. This will usually be your
 microphone input. In order to use the system sound or sound by a certain 
 program as an input for the visualization, you will need to redirect your 
 sound to Line-In. On Linux this can e.g. be done using PulseAudio, on 
 Mac via the Audio System-Preferences.
 
-The `visualizer.jar` contains everything you need to start the
-visualization:
-	
-	wget https://raw.githubusercontent.com/cmichi/music-visualizer/master/visualizer.jar
+	git clone https://github.com/cmichi/music-visualizer.git
+	cd music-visualizer/
 	java -jar visualizer.jar
+
+
+## Compile by yourself
 
 The jar has been assembled with Java 1.7. If you have a minor Java version
 you might get some kind of "Unsupported Error". However, you can still 

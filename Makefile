@@ -19,7 +19,7 @@ run:
 	java -cp $(CP) src/Main
 
 jar:
-	jar cvfm ./visualizer.jar ./Manifest.txt ./src/*.class ./lib/ 
+	jar cvfm ./visualizer.jar ./Manifest.txt ./src/*.class 
 
 runjar:
 	java -jar ./visualizer.jar
