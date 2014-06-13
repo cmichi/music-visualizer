@@ -1,12 +1,12 @@
 # music-visualizer
 
+[![Screenshot](https://github.com/cmichi/music-visualizer/raw/master/gallery/screenshot.png)](https://github.com/cmichi/music-visualizer/raw/master/gallery/screenshot.png)
+
 It seems to me, as if there are so many overloaded, colorful music
 visualizers crammed with effects out there, that the actual difficulty 
 is to write a reduced, simple one. 
 
-Project status: It works, but you will probably need to adjust the 
-java class path within the `Makefile`. I aim to update this readme with 
-a *.jar, which can easily be started independent of platforms and stuff.
+Project status: Works.
 
 The audio input is taken from you Line In. This will usually be your
 microphone input. In order to use the system sound or sound by a certain 
@@ -32,14 +32,6 @@ compile the code yourself on your machine, with your Java version:
 	# if you also want your own *.jar:
 	# make jar
 	# make runjar
-
-
-## Eye Candy
-
-[![Screenshot](https://github.com/cmichi/music-visualizer/raw/master/gallery/screenshot.png)](https://github.com/cmichi/music-visualizer/raw/master/gallery/screenshot.png)
-
-Outer circle is based upon the waveform of the input, inner circle is based
-on the beat.
 
 
 # License
