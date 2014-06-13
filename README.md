@@ -11,17 +11,35 @@ a *.jar, which can easily be started independent of platforms and stuff.
 The audio input is taken from you Line In. This will usually be your
 microphone input. In order to use the system sound or sound by a certain 
 program as an input for the visualization, you will need to redirect your 
-sound to Line In. On Linux this can e.g. be done using PulseAudio.
+sound to Line In. On Linux this can e.g. be done using PulseAudio, on 
+Mac via the Audio System-Preferences.
 
-Currently still requires Processing 2.0.
+Start the `visualizer.jar`:
+	
+	wget https://raw.githubusercontent.com/cmichi/music-visualizer/master/visualizer.jar
+	java -jar visualizer.jar
+
+The *.jar has been assembled with Java 1.7. If you have a minor Java version
+you might get some kind of "Unsupported Error". However, you can still 
+compile the code yourself on your machine, with your Java version:
+
+	git clone https://github.com/cmichi/music-visualizer.git
+	cd music-visualizer/
 
 	make compile
 	make run
+
+	# if you also want your own *.jar:
+	# make jar
+	# make runjar
 
 
 ## Eye Candy
 
 [![Screenshot](https://github.com/cmichi/music-visualizer/raw/master/gallery/screenshot.png)](https://github.com/cmichi/music-visualizer/raw/master/gallery/screenshot.png)
+
+Outer circle is based upon the waveform of the input, inner circle is based
+on the beat.
 
 
 # License

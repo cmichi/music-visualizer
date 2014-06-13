@@ -1,4 +1,5 @@
-CP = "/usr/share/processing/core/library/jogl-all.jar:/usr/share/processing/core/library/gluegen-rt.jar:/usr/share/processing/core/library/core.jar:./lib/minim.jar:./lib/jsminim.jar:./src/:."
+#CP = "/usr/share/processing/core/library/jogl-all.jar:/usr/share/processing/core/library/gluegen-rt.jar:/usr/share/processing/core/library/core.jar:./lib/minim.jar:./lib/jsminim.jar:./src/:."
+CP = "./lib/processing/core/library/jogl-all.jar:./lib/processing/core/library/gluegen-rt.jar:./lib/processing/core/library/core.jar:./lib/minim.jar:./lib/jsminim.jar:./src/:."
 
 default:
 	make compile
