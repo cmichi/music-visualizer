@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: src.Main
+Class-Path: ./lib/processing/core/library/jogl-all.jar ./lib/processing/core/library/gluegen-rt.jar ./lib/processing/core/library/core.jar ./lib/minim.jar ./lib/jsminim.jar
+
+

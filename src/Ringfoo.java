@@ -1,4 +1,4 @@
-//package main;
+package src;
 
 import processing.core.PApplet;
 import ddf.minim.AudioBuffer;

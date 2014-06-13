@@ -1,4 +1,4 @@
-//package main;
+package src;
 
 import processing.core.PApplet;
 import javax.media.opengl.GL;
@@ -31,9 +31,9 @@ public class Main extends PApplet {
 	int COL2 = color(9, 111, 111);		// #096f6f
 	int COL3 = color(122, 255, 255);	// #7affff
 
-	private Ring ring1;
-	private Ring ring2;
-	private Ring ring3;
+	//private Ring ring1;
+	//private Ring ring2;
+	//private Ring ring3;
 	private Ringfoo ringfoo;
 	 
 	 Minim minim;
@@ -67,9 +67,9 @@ public class Main extends PApplet {
 			ellipseMode(RADIUS);
 			  eRadius2 = 20;
 
-		ring1 = new Ring(this, width / 2, height / 2, 280, COL1);
-		ring2 = new Ring(this, width / 2, height / 2, 280, COL2);
-		ring3 = new Ring(this, width / 2, height / 2, 280, COL3);
+		//ring1 = new Ring(this, width / 2, height / 2, 280, COL1);
+		//ring2 = new Ring(this, width / 2, height / 2, 280, COL2);
+		//ring3 = new Ring(this, width / 2, height / 2, 280, COL3);
 		ringfoo = new Ringfoo(this, width / 2, height / 2, 280, COL3);
 	}
 
@@ -137,8 +137,8 @@ public class Main extends PApplet {
 
 	public static void main(String args[]) {
 		//PApplet.main(new String[] { "--present", "--full-screen", "Main" });
-		PApplet.main(new String[] { "Main" });
-		//PApplet.main(new String[] { "--present", "Main" });
+		PApplet.main(new String[] { "src.Main" });
+		//PApplet.main(new String[] { "--present", "src.Main" });
 	}
 
 	@Override 
