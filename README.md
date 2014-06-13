@@ -1,12 +1,17 @@
 # music-visualizer
 
 It seems to me, as if there are so many overloaded, colorful music
-visualizers, which are jammed with effects out there, that the actual
-difficulty is to create a reduced, simple one. 
+visualizers crammed with effects out there, that the actual difficulty 
+is to write a reduced, simple one. 
 
 Project status: It works, but you will probably need to adjust the 
 java class path within the `Makefile`. I aim to update this readme with 
 a *.jar, which can easily be started independent of platforms and stuff.
+
+The audio input is taken from you Line In. This will usually be your
+microphone input. In order to use the system sound or sound by a certain 
+program as an input for the visualization, you will need to redirect your 
+sound to Line In. On Linux this can e.g. be done using PulseAudio.
 
 Currently still requires Processing 2.0.
 
