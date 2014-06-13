@@ -94,6 +94,7 @@ public class Main extends PApplet {
 		else
 			COL = COL1;
 		ringfoo.draw(in.mix, eRadius, COL2);
+		//ringfoo.draw(in.left, eRadius, COL2);
 		//ringfoo.draw(in.right, eRadius, COL2);
 
 		/*

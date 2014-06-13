@@ -5,10 +5,14 @@ visualizers, which are jammed with effects out there, that the actual
 difficulty is to create a reduced, simple one. 
 
 Project status: It works, but you will probably need to adjust the 
-java class path. I aim to update this readme with a *.jar, which can 
-easily be started independent of platforms and stuff.
+java class path within the `Makefile`. I aim to update this readme with 
+a *.jar, which can easily be started independent of platforms and stuff.
 
 Currently still requires Processing 2.0.
+
+	make compile
+	make run
+
 
 ## Eye Candy
 
