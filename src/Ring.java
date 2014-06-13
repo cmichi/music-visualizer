@@ -1,8 +1,6 @@
 package src;
 
 import processing.core.PApplet;
-import ddf.minim.AudioBuffer;
-import ddf.minim.Minim;
 import ddf.minim.*;
 
 public class Ring {
