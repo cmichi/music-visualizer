@@ -6,7 +6,10 @@ default:
 	make run
 
 compile:
-	javac -cp $(CP) src/Main.java src/Ringfoo.java
+	javac -cp $(CP) src/Main.java src/Ring.java
+
+clean:
+	rm src/*class
 
 run:
 	java -cp $(CP) src/Main
