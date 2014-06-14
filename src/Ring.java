@@ -8,6 +8,7 @@ public class Ring {
 	private int x;
 	private int y;
 	private float radius;
+	private float multiplyBy;
 	private PApplet p;
 
 	public Ring(PApplet _main, int _x, int _y, float _radius) {
@@ -15,6 +16,8 @@ public class Ring {
 		this.y = _y;
 		this.radius = _radius;
 		this.p = _main;
+
+		this.multiplyBy = p.displayWidth * 0.08f;
 	}
 	
 	public void draw(AudioBuffer stuff, int color) {
@@ -30,8 +33,7 @@ public class Ring {
 		float angle = p.TWO_PI / (float) numPoints;
 
 		for(int i = 0; i < numPoints; i++) {
-			float radius_ = radius + (stuff.get(i) * 50.0f);
-			//float radius_ = radius + (float)(Math.log(stuff.get(i)) * 50.0f);
+			float radius_ = radius + (stuff.get(i) * multiplyBy);
 			float x = radius_ * p.sin(angle*i);
 			float y = radius_ * p.cos(angle*i);
 
