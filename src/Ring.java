@@ -2,14 +2,15 @@ package src;
 
 import processing.core.PApplet;
 import ddf.minim.*;
+import java.lang.Math;
 
 public class Ring {
 	private int x;
 	private int y;
-	private int radius;
+	private float radius;
 	private PApplet p;
 
-	public Ring(PApplet _main, int _x, int _y, int _radius) {
+	public Ring(PApplet _main, int _x, int _y, float _radius) {
 		this.x = _x;
 		this.y = _y;
 		this.radius = _radius;
@@ -29,7 +30,8 @@ public class Ring {
 		float angle = p.TWO_PI / (float) numPoints;
 
 		for(int i = 0; i < numPoints; i++) {
-			float radius_ = radius + (stuff.get(i) * 50);
+			float radius_ = radius + (stuff.get(i) * 50.0f);
+			//float radius_ = radius + (float)(Math.log(stuff.get(i)) * 50.0f);
 			float x = radius_ * p.sin(angle*i);
 			float y = radius_ * p.cos(angle*i);
 

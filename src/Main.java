@@ -12,28 +12,32 @@ public class Main extends PApplet {
 
 	private Minim minim;
 	private AudioInput in;
-	private BeatDetect beat;
+	private BeatDetect beatSound;
+	private BeatDetect beatFreq;
 
-	private final int BG = color(9, 23, 32); 		// #091720
+	private final int BG = color(9, 23, 32); 	// #091720
 	private final int COL1 = color(173, 218, 237);	// #addaed
-	private final int COL2 = color(9, 111, 111);		// #096f6f
+	private final int COL2 = color(9, 111, 111);	// #096f6f
 	private final int COL3 = color(122, 255, 255);	// #7affff
 
 	private Ring ring;
-	private float beatRadius = 20.0f;
+	private float beatRadius;
 	
 	public void setup() {
-		frameRate(30);
-		size(displayWidth, displayHeight, OPENGL);
+		frameRate(25);
+		size(displayWidth, displayHeight);
 
 		smooth();
 
 		minim = new Minim(this);
 		minim.debugOn();
 		    
-		in = minim.getLineIn(Minim.STEREO, 314);
-		beat = new BeatDetect();
-		beat.setSensitivity(50);
+		in = minim.getLineIn(Minim.STEREO);
+		beatSound = new BeatDetect();
+		beatSound.detectMode(BeatDetect.SOUND_ENERGY);
+
+		beatFreq = new BeatDetect();
+		beatFreq.detectMode(BeatDetect.FREQ_ENERGY);
 
 		ring = new Ring(this, width/2, height/2, 280);
 	}
@@ -55,14 +59,17 @@ public class Main extends PApplet {
 		stroke(COL2);
 		ellipseMode(RADIUS);
 
-		beat.detect(in.mix);
-		if (beat.isOnset()) beatRadius = 80;
+		beatSound.detect(in.mix);
+		beatFreq.detect(in.mix);
+		if (beatSound.isOnset() || beatFreq.isKick() || beatFreq.isSnare() || beatFreq.isHat()) 
+			beatRadius = height*0.11f;
 
 		ellipse(width/2, height/2, beatRadius, beatRadius);
 		beatRadius *= 0.95;
 
-		if (beatRadius < 20) beatRadius = 20;
+		if (beatRadius < height*0.08) beatRadius = height*0.08f;
 	}
+
 
 	public void stop() {
 		/* close Minim audio classes when done with them */
